@@ -15,6 +15,18 @@
           var pageLabel = document.createElement("label");
           pageLabel.innerHTML = "Page " + (i + 1);
 
+          var assemblyName = document.createElement("input");
+          assemblyName.type = "text";
+          assemblyName.name = "assembly" + i;
+
+          var partName = document.createElement("input");
+          partName.type = "text";
+          partName.name = "part" + i;
+
+          var idName = document.createElement("input");
+          idName.type = "text";
+          idName.name = "id" + i;
+
           var drawingInput = document.createElement("input");
           drawingInput.type = "file";
           drawingInput.name = "drawing" + i;
@@ -25,13 +37,54 @@
           mainInput.name = "main" + i;
           mainInput.accept = "image/png, image/jpeg";
 
+          var step_aInput = document.createElement("input");
+          step_aInput.type = "file";
+          step_aInput.name = "step_a" + i;
+          step_aInput.accept = "image/png, image/jpeg";
+
+          var step_bInput = document.createElement("input");
+          step_bInput.type = "file";
+          step_bInput.name = "step_b" + i;
+          step_bInput.accept = "image/png, image/jpeg";
+
+          var step_cInput = document.createElement("input");
+          step_cInput.type = "file";
+          step_cInput.name = "step_c" + i;
+          step_cInput.accept = "image/png, image/jpeg";
+
           pageDiv.appendChild(pageLabel);
+
+          pageDiv.appendChild(document.createElement("br"));
+          pageDiv.appendChild(document.createTextNode("Assembly Name: "));
+          pageDiv.appendChild(assemblyName);
+
+          pageDiv.appendChild(document.createElement("br"));
+          pageDiv.appendChild(document.createTextNode("Part Name: "));
+          pageDiv.appendChild(partName);
+
+          pageDiv.appendChild(document.createElement("br"));
+          pageDiv.appendChild(document.createTextNode("Part ID: "));
+          pageDiv.appendChild(idName);
+
           pageDiv.appendChild(document.createElement("br"));
           pageDiv.appendChild(document.createTextNode("Drawing: "));
           pageDiv.appendChild(drawingInput);
+
           pageDiv.appendChild(document.createElement("br"));
           pageDiv.appendChild(document.createTextNode("Main: "));
           pageDiv.appendChild(mainInput);
+
+          pageDiv.appendChild(document.createElement("br"));
+          pageDiv.appendChild(document.createTextNode("Step A: "));
+          pageDiv.appendChild(step_aInput);
+
+          pageDiv.appendChild(document.createElement("br"));
+          pageDiv.appendChild(document.createTextNode("Step B: "));
+          pageDiv.appendChild(step_bInput);
+
+          pageDiv.appendChild(document.createElement("br"));
+          pageDiv.appendChild(document.createTextNode("Step C: "));
+          pageDiv.appendChild(step_cInput);
 
           container.appendChild(pageDiv);
         }
