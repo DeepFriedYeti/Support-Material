@@ -138,8 +138,9 @@ def generate_pdf():
         file.write(latex_code)
 
     # Compile the LaTeX document using pdflatex command
-    subprocess.run(['pdflatex', tex_file])
-    subprocess.run(['pdflatex', tex_file])
+    subprocess.run(['latexmk','-pdf', tex_file])
+    subprocess.run(['latexmk','-pdf', tex_file])
+    #subprocess.run(['pdflatex', tex_file])
 
     # Move the generated PDF to the current directory
     pdf_file = 'output.pdf'
